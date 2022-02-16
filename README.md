@@ -6,7 +6,7 @@
 * [Setup](#setup)
 
 ## General info
-Scrape information about food carts in Tokyo.
+Scrape information about food carts in Tokyo and export the data to a CSV file.
 
 ## Technologies
 Created with:
@@ -14,6 +14,12 @@ Created with:
 * [Kimurai](https://github.com/vifreefly/kimuraframework)
 	
 ## Setup
+Begin by installing Kimurai:
+
+```
+$ gem install kimurai
+```
+
 To run this project, install it locally:
 
 ```
