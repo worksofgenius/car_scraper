@@ -14,7 +14,7 @@ Created with:
 * [Kimurai](https://github.com/vifreefly/kimuraframework)
 	
 ## Setup
-To run this project, install it locally and use npm:
+To run this project, install it locally:
 
 ```
 $ cd ../car_scraper
