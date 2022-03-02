@@ -6,9 +6,9 @@ class CarScraper < Kimurai::Base
   @start_urls = ['https://kitchencars-japan.com/pages/cars/search?_token=8HG7oZU4RnkbyuNZtHScA2RmzVqcs32fnxNEU23m&prefecture=13&genre=&country=&car_type=&free_word=']
   @engine = :mechanize
   @config = {
-    user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36",
+    user_agent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36',
     before_request: { delay: 4..7 },
-    encoding: "UTF-8"
+    encoding: 'UTF-8'
   }
 
   @@cars = []
