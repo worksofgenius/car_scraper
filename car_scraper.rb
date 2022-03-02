@@ -39,3 +39,4 @@ class CarScraper < Kimurai::Base
 end
 
 CarScraper.crawl!
+
