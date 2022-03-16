@@ -337,7 +337,6 @@ class CarScraperEach < Kimurai::Base
     "https://kitchencars-japan.com/k/glades-kitchen",
     "https://kitchencars-japan.com/k/gloutontonkitchen",
     "https://kitchencars-japan.com/k/gluck-bude",
-    "https://kitchencars-japan.com/k/gogomumbai",
     "https://kitchencars-japan.com/k/gohanya-imhome",
     "https://kitchencars-japan.com/k/gooddoog",
     "https://kitchencars-japan.com/k/goodgoodfoods",
@@ -1178,21 +1177,20 @@ class CarScraperEach < Kimurai::Base
     web_page = browser.current_response
     car_list = web_page.css('table.table')
     car_list.css('tbody.word-break__all').each do |char_element|
-      name = char_element.css('td')[0].text.gsub(/\n/, "")
-      type = char_element.css('td')[1].text.gsub(/\n/, "")
-      size = char_element.css('td')[2].text.gsub(/\n/, "")
-      facilitiy = char_element.css('td')[3].text.gsub(/\n/, "")
-      food = char_element.css('td')[4].text.gsub(/\n/, "")
-      price = char_element.css('td')[5].text.gsub(/\n/, "")
-      area = char_element.css('td')[6].text.gsub(/\n/, "")
-      url = char_element.css('td')[7].text.gsub(/\n/, "")
-      base = char_element.css('td')[8].text.gsub(/\n/, "")
-      tel = char_element.css('td')[9].text.gsub(/\n/, "")
-      hours = char_element.css('td')[10].text.gsub(/\n/, "")
-      mgmt = char_element.css('td')[11].text.gsub(/\n/, "")
-      past = char_element.css('td')[12].text.gsub(/\n/, "")
-      opened = char_element.css('td')[13].text.gsub(/\n/, "")
-      car_details = [name, type, size, facilitiy, food, price, area, url, base, tel, hours, mgmt, past, opened]
+      name = char_element.css('td')[1].text.gsub(/\n/, "")
+      type = char_element.css('td')[2].text.gsub(/\n/, "")
+      size = char_element.css('td')[3].text.gsub(/\n/, "")
+      facilitiy = char_element.css('td')[4].text.gsub(/\n/, "")
+      food = char_element.css('td')[5].text.gsub(/\n/, "")
+      price = char_element.css('td')[6].text.gsub(/\n/, "")
+      area = char_element.css('td')[7].text.gsub(/\n/, "")
+      url = char_element.css('td')[8].text.gsub(/\n/, "")
+      base = char_element.css('td')[9].text.gsub(/\n/, "")
+      hours = char_element.css('td')[11].text.gsub(/\n/, "")
+      # mgmt = char_element.css('td')[12].text.gsub(/\n/, "")
+      # past = char_element.css('td')[13].text.gsub(/\n/, "")
+      # opened = char_element.css('td')[14].text.gsub(/\n/, "")
+      car_details = [name, type, size, facilitiy, food, price, area, url, base, hours]
       @@cars << car_details if !@@cars.include?(car_details)
     end
   end
